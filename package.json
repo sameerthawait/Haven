@@ -1,0 +1,13 @@
+{
+  "name": "haven-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/haven.git"
+  },
+  "devDependencies": {
+    "@antithesishq/bombadil": "^0.3.2"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.98.0"
+  }
+}
