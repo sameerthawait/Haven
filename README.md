@@ -6,7 +6,7 @@
 ───────────────────────────────────────────────
 ```
 
-![Haven](docs/haven.jpg)
+![Haven]
 
 Haven is a self-hosted AI workspace -- meant to be the self-hosted version of the UI experience you get from ChatGPT and Claude, but with more jank and fun. Running on your own hardware, with your own data -- local-first, privacy-first, and no trojan.
 
@@ -14,7 +14,7 @@ Haven is a self-hosted AI workspace -- meant to be the self-hosted version of th
   - **Chat** -- chat with any local model or API; adding them is super simple.<br>　<sub>vLLM · llama.cpp · Ollama · OpenRouter · OpenAI · GitHub Copilot</sub>
   - **Agent** -- hand it tools and let it run the whole task itself.<br>　<sub>built on [opencode](https://github.com/anomalyco/opencode) · MCP · web · files · shell · skills · memory</sub>
   - **Cookbook** -- Scans your hardware, recommends models, click to download and serve.. easy!<br>　<sub>built on [llmfit](https://github.com/AlexsJones/llmfit) · VRAM-aware · GGUF / FP8 / AWQ · fit scoring · vLLM / llama.cpp serving</sub>
-  - **Deep Research** -- multi-step runs that gather, read, and synthesize sources into a nice visual report.<br>　<sub>adapted from [Tongyi DeepResearch](https://github.com/Alibaba-NLP/DeepResearch)</sub>
+  - **Deep Research** -- multi-step runs that gather, read, and synthesize sources into a nice visual report.<br>　<sub>adapted from [Tongyi DeepResearch](https://github.com/Alibaba-N</sub>
   - **Compare** -- a fun tool to compare models side by side. Test completely blind, no bias!<br>　<sub>multi-model · blind test · synthesis</sub>
   - **Documents** -- YOU write the text, AI is there to assist, not the opposite.<br>　<sub>multi-tab editor · markdown · HTML · CSV · syntax highlighting · AI edits · suggestions</sub>
   - **Memory / Skills** -- Persistent memory and skills, your agent evolves over time as it better understands you and your tasks!<br>　<sub>ChromaDB · fastembed (ONNX) · vector + keyword retrieval · import/export</sub>
@@ -24,22 +24,22 @@ Haven is a self-hosted AI workspace -- meant to be the self-hosted version of th
   - **Works on mobile** -- looks and runs great on your phone, not just desktop.<br>　<sub>responsive · installable (PWA) · touch gestures</sub>
   - **Extras** -- more to explore, happy if you give it a go!<br>　<sub>image editor · theme editor · file uploads (vision + PDF) · web search · presets · sessions · 2FA</sub>
 
-## Demo
-A full, hover-to-play tour lives on the landing page (`docs/index.html`).
+
 
 <details>
 <summary>Screenshots / clips</summary>
 
 ### Chat & Agents
-![Chat & Agents](docs/chat.gif)
+![Chat & Agents]
 ### Deep Research
-![Deep Research](docs/research.gif)
+![Deep Research]
 ### Compare
-![Compare](docs/compare.gif)
+![Compare]
+
 ### Documents
-![Documents](docs/document.gif)
+![Documents]
 ### Notes & Tasks
-![Notes & Tasks](docs/notes.gif)
+![Notes & Tasks]
 
 </details>
 
