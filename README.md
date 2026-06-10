@@ -6,42 +6,21 @@
 ───────────────────────────────────────────────
 ```
 
-![Haven]
-
 Haven is a self-hosted AI workspace -- meant to be the self-hosted version of the UI experience you get from ChatGPT and Claude, but with more jank and fun. Running on your own hardware, with your own data -- local-first, privacy-first, and no trojan.
 
 ## Features
-  - **Chat** -- chat with any local model or API; adding them is super simple.<br>　<sub>vLLM · llama.cpp · Ollama · OpenRouter · OpenAI · GitHub Copilot</sub>
-  - **Agent** -- hand it tools and let it run the whole task itself.<br>　<sub>built on [opencode](https://github.com/anomalyco/opencode) · MCP · web · files · shell · skills · memory</sub>
-  - **Cookbook** -- Scans your hardware, recommends models, click to download and serve.. easy!<br>　<sub>built on [llmfit](https://github.com/AlexsJones/llmfit) · VRAM-aware · GGUF / FP8 / AWQ · fit scoring · vLLM / llama.cpp serving</sub>
-  - **Deep Research** -- multi-step runs that gather, read, and synthesize sources into a nice visual report.<br>　<sub>adapted from [Tongyi DeepResearch](https://github.com/Alibaba-N</sub>
-  - **Compare** -- a fun tool to compare models side by side. Test completely blind, no bias!<br>　<sub>multi-model · blind test · synthesis</sub>
-  - **Documents** -- YOU write the text, AI is there to assist, not the opposite.<br>　<sub>multi-tab editor · markdown · HTML · CSV · syntax highlighting · AI edits · suggestions</sub>
-  - **Memory / Skills** -- Persistent memory and skills, your agent evolves over time as it better understands you and your tasks!<br>　<sub>ChromaDB · fastembed (ONNX) · vector + keyword retrieval · import/export</sub>
-  - **Email** -- IMAP/SMTP inbox with AI triage built in: urgency reminders, auto-tag, auto-summary, auto-reply drafts, auto-spam.<br>　<sub>IMAP · SMTP · per-account routing · CalDAV-aware</sub>
-  - **Notes & Tasks** -- Quick notes with reminders, a todo list, and scheduled tasks the agent can act on.<br>　<sub>note pings · checklist · cron-style tasks · ntfy / browser / email channels</sub>
-  - **Calendar** -- Local-first calendar with CalDAV sync to Radicale / Nextcloud / Apple / Fastmail.<br>　<sub>CalDAV pull · .ics import/export · per-calendar colors · agent-aware</sub>
-  - **Works on mobile** -- looks and runs great on your phone, not just desktop.<br>　<sub>responsive · installable (PWA) · touch gestures</sub>
-  - **Extras** -- more to explore, happy if you give it a go!<br>　<sub>image editor · theme editor · file uploads (vision + PDF) · web search · presets · sessions · 2FA</sub>
-
-
-
-<details>
-<summary>Screenshots / clips</summary>
-
-### Chat & Agents
-![Chat & Agents]
-### Deep Research
-![Deep Research]
-### Compare
-![Compare]
-
-### Documents
-![Documents]
-### Notes & Tasks
-![Notes & Tasks]
-
-</details>
+  - **Chat** -- Chat with any local model or API with zero friction.<br>　<sub>vLLM · llama.cpp · Ollama · OpenRouter · OpenAI · GitHub Copilot</sub>
+  - **Agent** -- Delegate complex, multi-step tasks to autonomous agents.<br>　<sub>MCP Tools · Web Search · File Access · Shell Tooling · Persistent Skills</sub>
+  - **Cookbook** -- Scan host hardware, receive VRAM-aware model recommendations, and run them with one click.<br>　<sub>GGUF / FP8 / AWQ support · Fit scoring · Built-in vLLM & llama.cpp serving</sub>
+  - **Deep Research** -- Gather, read, analyze, and synthesize web sources into interactive visual reports automatically.
+  - **Compare** -- Side-by-side model comparison with optional blind testing to evaluate model quality objectively.
+  - **Documents** -- A full multi-tab markdown, HTML, and CSV document editor with real-time AI-assisted editing.
+  - **Memory & Skills** -- Persistent vector and keyword-based memory that helps the agent learn and adapt to your workflows over time.<br>　<sub>Powered by local ChromaDB & Fastembed (ONNX)</sub>
+  - **Email Integration** -- Full IMAP/SMTP inbox with automated AI triage: summaries, urgency filters, and auto-drafted replies.
+  - **Notes & Tasks** -- Scheduled background tasks, cron-style integrations, notes, and checklist management.
+  - **Calendar** -- CalDAV-synchronized local-first calendar (compatible with Nextcloud, Apple, Fastmail, etc.).
+  - **Mobile First** -- A fully responsive progressive web app (PWA) designed to look and run beautifully on phone and desktop.
+  - **Extensions** -- Built-in canvas image editor, custom CSS theme editor, PDF parsing, multi-user sessions, and 2FA.
 
 ## Quick Start
 
@@ -62,8 +41,6 @@ pull request guidelines.
 
 ### Docker (recommended)
 ```bash
-git clone https://github.com/your-org/haven.git
-cd haven
 cp .env.example .env       # optional, but recommended for explicit defaults
 docker compose up -d --build
 ```
@@ -76,8 +53,6 @@ only when you intentionally want LAN/reverse-proxy access.
 
 ### Native Linux / macOS
 ```bash
-git clone https://github.com/your-org/haven.git
-cd haven
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -94,8 +69,6 @@ Docker on macOS cannot use the Metal GPU. For GPU-accelerated Cookbook on an
 M-series Mac, run Haven natively:
 
 ```bash
-git clone https://github.com/your-org/haven.git
-cd haven
 ./start-macos.sh
 ```
 
@@ -268,16 +241,12 @@ do not run on macOS. MLX-only models are not served by Haven.
 server; safe to re-run):
 
 ```powershell
-git clone https://github.com/your-org/haven.git
-cd haven
 powershell -ExecutionPolicy Bypass -File .\launch-windows.ps1
 ```
 
 Or do it by hand:
 
 ```powershell
-git clone https://github.com/your-org/haven.git
-cd haven
 py -3.11 -m venv venv
 venv\Scripts\Activate.ps1
 pip install -r requirements.txt
@@ -418,25 +387,15 @@ src/       llm_core, agent_loop, agent_tools, chat_processor, search/
 routes/    chat, session, document, memory, model … endpoints
 services/  docs, memory, search, hwfit (Cookbook) …
 static/    index.html + app.js + style.css + js/ (modular front-end)
-docs/      landing page (index.html) + preview clips
+docs/      API documentation & reference guides
 ```
 
 ## Data
 All user data lives in `data/` (gitignored): `app.db` (sessions, messages, documents),
 `memory.json`, `presets.json`, `uploads/`, `personal_docs/`, `chroma/`, `settings.json`.
 
-## Star History
-
-<a href="https://www.star-history.com/?repos=your-org%2Fhaven&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=your-org/haven&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=your-org/haven&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=your-org/haven&type=date&legend=top-left" />
- </picture>
-</a>
-
 ## License
-MIT -- see [LICENSE](LICENSE) and [ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md).
+MIT -- see [LICENSE](LICENSE).
 
 ```
                                   |

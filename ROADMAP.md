@@ -47,7 +47,6 @@ the codebase, you are probably right to stay away.
 
 ## Refactor Targets
 - CSS cleanup. `static/style.css` basically Calypso's island atm.
-- Tour core helper. The onboarding tours have too much copy-pasted scaffolding; promote a shared `tour-core.js` helper before adding more tours.
 - Modal/window positioning cleanup. Some window controls have improved, but the
   underlying popup/dropdown/fixed-position behavior is still too fragile.
 - Mobile media override discoverability. A lot of "CSS did not move" bugs are mobile `@media` overrides of the same selector; comments or linting around desktop/mobile paired rules would help.
@@ -65,7 +64,7 @@ the codebase, you are probably right to stay away.
 - Mobile gallery/editor polish. Easier to launch/download inpaint model or any missing pieces.
 - Accessibility pass: keyboard navigation, focus states, contrast, reduced motion.
 - Improve empty states and error messages on fresh installs.
-- Tighten first-run setup, hints, and tours so they do not repeat or fight each other.
+- Tighten first-run setup and onboarding flows.
 - Vendor CDN assets eventually for a more fully self-hosted/offline mode.
 
 ## Backend

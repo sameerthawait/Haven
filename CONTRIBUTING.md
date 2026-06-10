@@ -25,7 +25,6 @@ End-users cloning the repo will land on `dev` by default. To run the curated/sta
 Docker is the recommended path for normal testing:
 
 ```bash
-git clone https://github.com/your-org/haven.git
 cd haven
 cp .env.example .env
 docker compose up -d --build
@@ -34,13 +33,14 @@ docker compose up -d --build
 Manual development uses Python 3.11+:
 
 ```bash
+cd haven
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python -m uvicorn app:app --host 0.0.0.0 --port 7000
 ```
 
-Windows is not actively tested. Docker on Linux or a Linux/macOS manual install is the safer path for now.
+Native installations on Linux, macOS, and Windows are all supported.
 
 ## Running Checks
 
